@@ -16,7 +16,7 @@ public class HelloWorldController {
     }
 
     @GetMapping("/tokyo")
-    public static String time() {
+    public String time() {
         ZoneId zone = ZoneId.of("Asia/Tokyo");
         LocalTime now = LocalTime.now(zone);
         return "東京の時刻： %s".formatted(now);
